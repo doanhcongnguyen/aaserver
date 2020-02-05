@@ -1,0 +1,1313 @@
+2020-02-04 15:35:41.782 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 3724 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 15:35:41.785 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 15:35:41.854 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 15:35:41.855 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 15:35:42.648 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 15:35:42.659 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2020-02-04 15:35:43.168 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f673e486] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 15:35:43.510 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 15:35:43.526 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:35:43.534 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 15:35:43.535 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 15:35:43.608 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 15:35:43.608 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1752 ms
+2020-02-04 15:35:43.996 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:35:43.998 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-02-04 15:35:45.103 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:827)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$154aa6f5.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$154aa6f5$$FastClassBySpringCGLIB$$b262c844.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$154aa6f5.jpaVendorAdapter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.dcn.aaserver.AaServerApplication.main(AaServerApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2020-02-04 15:35:45.107 [restartedMain] WARN  o.s.b.a.orm.jpa.DatabaseLookup - Unable to determine jdbc url from datasource
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:328)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:356)
+	at org.springframework.boot.autoconfigure.orm.jpa.DatabaseLookup.getDatabase(DatabaseLookup.java:73)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaProperties.determineDatabase(JpaProperties.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.jpaVendorAdapter(JpaBaseConfiguration.java:113)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$154aa6f5.CGLIB$jpaVendorAdapter$4(<generated>)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$154aa6f5$$FastClassBySpringCGLIB$$b262c844.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration$$EnhancerBySpringCGLIB$$154aa6f5.jpaVendorAdapter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:857)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:760)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.dcn.aaserver.AaServerApplication.main(AaServerApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:319)
+	... 67 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:827)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 68 common frames omitted
+2020-02-04 15:35:45.143 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 15:35:45.185 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 15:35:45.186 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 15:35:45.264 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 15:35:45.363 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:35:45.364 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-02-04 15:35:46.366 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:827)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:94)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:152)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:179)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:119)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:904)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:935)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.dcn.aaserver.AaServerApplication.main(AaServerApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2020-02-04 15:35:46.367 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata : Access denied for user 'pms'@'localhost' to database 'aaserver'
+2020-02-04 15:35:46.375 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 15:35:46.389 [restartedMain] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000422: Disabling contextual LOB creation as connection was null
+2020-02-04 15:35:46.486 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:35:46.486 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-02-04 15:35:47.490 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:827)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.dcn.aaserver.AaServerApplication.main(AaServerApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2020-02-04 15:35:47.492 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1044, SQLState: 42000
+2020-02-04 15:35:47.493 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Access denied for user 'pms'@'localhost' to database 'aaserver'
+2020-02-04 15:35:47.501 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+2020-02-04 15:35:47.505 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-04 15:35:47.523 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-04 15:35:47.532 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:743)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:390)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1214)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1203)
+	at com.dcn.aaserver.AaServerApplication.main(AaServerApplication.java:17)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:402)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:377)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:69)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:60)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:67)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.getTables(InformationExtractorJdbcDatabaseMetaDataImpl.java:329)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:120)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:65)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:207)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:183)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:72)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:310)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:467)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:939)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:57)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:390)
+	... 25 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Access denied for user 'pms'@'localhost' to database 'aaserver'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:827)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:447)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:136)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:369)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:198)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:467)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:541)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:180)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:43)
+	... 40 common frames omitted
+2020-02-04 15:36:14.105 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 16160 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 15:36:14.108 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 15:36:14.162 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 15:36:14.162 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 15:36:14.753 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 15:36:14.762 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2020-02-04 15:36:15.248 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9562796a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 15:36:15.526 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 15:36:15.538 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:36:15.546 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 15:36:15.547 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 15:36:15.626 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 15:36:15.626 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1464 ms
+2020-02-04 15:36:15.993 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:36:15.995 [restartedMain] WARN  c.z.hikari.util.DriverDataSource - Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-02-04 15:36:16.082 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 15:36:16.115 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 15:36:16.154 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 15:36:16.155 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 15:36:16.248 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 15:36:16.331 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 15:36:16.649 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 15:36:16.685 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 15:36:16.848 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 15:36:16.880 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 15:36:17.107 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 15:36:17.150 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:36:17.166 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 15:36:17.169 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 3.422 seconds (JVM running for 4.698)
+2020-02-04 15:36:17.180 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 15:36:18.210 [RMI TCP Connection(2)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 15:36:18.211 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 15:36:18.221 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 15:36:43.127 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 15196 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 15:36:43.131 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 15:36:43.189 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 15:36:43.189 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 15:36:43.792 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 15:36:43.801 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2020-02-04 15:36:44.289 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$afccd5a3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 15:36:44.551 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 15:36:44.564 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:36:44.573 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 15:36:44.574 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 15:36:44.652 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 15:36:44.653 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1463 ms
+2020-02-04 15:36:45.003 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:36:45.100 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 15:36:45.135 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 15:36:45.175 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 15:36:45.176 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 15:36:45.265 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 15:36:45.349 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 15:36:45.608 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 15:36:45.642 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 15:36:45.798 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 15:36:45.825 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 15:36:46.040 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 15:36:46.081 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:36:46.098 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 15:36:46.100 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 3.312 seconds (JVM running for 4.627)
+2020-02-04 15:36:46.109 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 15:36:46.266 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 15:36:46.267 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 15:36:46.279 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-02-04 15:46:27.999 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 1492 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 15:46:28.002 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 15:46:28.068 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 15:46:28.068 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 15:46:28.755 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 15:46:28.764 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+2020-02-04 15:46:29.233 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c987490d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 15:46:29.499 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 15:46:29.513 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:46:29.524 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 15:46:29.524 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 15:46:29.614 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 15:46:29.614 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1546 ms
+2020-02-04 15:46:30.015 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:46:30.128 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 15:46:30.164 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 15:46:30.205 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 15:46:30.207 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 15:46:30.302 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 15:46:30.389 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 15:46:30.694 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 15:46:30.730 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 15:46:30.906 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 15:46:30.932 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 15:46:31.150 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 15:46:31.191 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:46:31.207 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 15:46:31.209 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 3.558 seconds (JVM running for 4.956)
+2020-02-04 15:46:31.219 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 15:46:32.161 [RMI TCP Connection(3)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 15:46:32.161 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 15:46:32.170 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-02-04 15:49:15.771 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 11424 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 15:49:15.774 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 15:49:15.842 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 15:49:15.843 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 15:49:18.192 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 15:49:18.227 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2020-02-04 15:49:18.860 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$15d3a145] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 15:49:19.278 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 15:49:19.303 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:49:19.311 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 15:49:19.313 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 15:49:19.389 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 15:49:19.389 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3546 ms
+2020-02-04 15:49:19.816 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 15:49:19.899 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 15:49:19.932 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 15:49:19.969 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 15:49:19.970 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 15:49:20.074 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 15:49:20.210 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 15:49:20.464 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 15:49:20.514 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 15:49:20.684 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 15:49:20.773 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 15:49:20.831 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 15:49:20.939 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 15:49:21.147 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 15:49:21.159 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 15:49:21.184 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 15:49:21.283 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 15:49:21.300 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 15:49:21.302 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 5.935 seconds (JVM running for 7.309)
+2020-02-04 15:49:21.311 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 15:49:21.996 [RMI TCP Connection(3)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 15:49:21.998 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 15:49:22.006 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2020-02-04 16:04:33.313 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 5556 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:04:33.316 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:04:33.371 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:04:33.371 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:04:34.222 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:04:34.267 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40ms. Found 1 repository interfaces.
+2020-02-04 16:04:34.805 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d475f25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:04:35.067 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:04:35.079 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:04:35.088 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:04:35.089 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:04:35.166 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:04:35.166 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1795 ms
+2020-02-04 16:04:35.560 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:04:35.647 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:04:35.681 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:04:35.721 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:04:35.722 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:04:35.812 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:04:35.911 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:04:36.441 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:04:36.474 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:04:36.646 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:04:36.866 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:04:36.993 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:04:37.054 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:04:37.160 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:04:37.360 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:04:37.374 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:04:37.393 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:04:37.489 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:04:37.506 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:04:37.509 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.533 seconds (JVM running for 5.729)
+2020-02-04 16:04:37.518 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:04:38.100 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:04:38.101 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:04:38.112 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-02-04 16:14:34.889 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 13480 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:14:34.892 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:14:34.955 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:14:34.955 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:14:35.765 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:14:35.805 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2020-02-04 16:14:36.352 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fad09e52] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:14:36.588 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:14:36.601 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:14:36.610 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:14:36.610 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:14:36.687 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:14:36.687 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1732 ms
+2020-02-04 16:14:37.075 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:14:37.175 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:14:37.209 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:14:37.250 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:14:37.251 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:14:37.341 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:14:37.424 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:14:37.925 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:14:37.959 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:14:37.966 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userResource': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.dcn.aaserver.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-02-04 16:14:37.966 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:14:37.970 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-04 16:14:37.977 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-04 16:14:37.980 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-04 16:14:37.994 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-04 16:14:38.161 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field service in com.dcn.aaserver.rest.UserResource required a bean of type 'com.dcn.aaserver.service.UserService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.dcn.aaserver.service.UserService' in your configuration.
+
+2020-02-04 16:15:43.306 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 14016 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:15:43.308 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:15:43.360 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:15:43.360 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:15:44.176 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:15:44.219 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
+2020-02-04 16:15:44.799 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$203f2afa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:15:45.063 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:15:45.076 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:15:45.084 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:15:45.084 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:15:45.160 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:15:45.160 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1800 ms
+2020-02-04 16:15:45.574 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:15:45.659 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:15:45.695 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:15:45.734 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:15:45.735 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:15:45.827 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:15:45.929 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:15:46.430 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:15:46.463 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:15:46.640 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:15:46.922 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:15:47.010 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:15:47.072 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:15:47.180 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:15:47.395 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:15:47.408 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:15:47.428 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:15:47.532 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:15:47.551 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:15:47.554 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.564 seconds (JVM running for 6.12)
+2020-02-04 16:15:47.564 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:15:48.755 [RMI TCP Connection(3)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:15:48.756 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:15:48.767 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-02-04 16:31:04.447 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 3220 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:31:04.450 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:31:04.513 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:31:04.513 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:31:05.402 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:31:05.443 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2020-02-04 16:31:06.075 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f643d101] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:31:06.347 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:31:06.359 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:31:06.368 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:31:06.368 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:31:06.445 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:31:06.445 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1932 ms
+2020-02-04 16:31:06.847 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:31:06.933 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:31:06.968 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:31:07.011 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:31:07.012 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:31:07.151 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:31:07.247 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:31:07.888 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:31:07.924 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:31:08.107 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:31:08.194 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userResource': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'mapper'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.dcn.aaserver.domain.mapper.UserMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-02-04 16:31:08.194 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:31:08.197 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-04 16:31:08.203 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-04 16:31:08.206 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2020-02-04 16:31:08.220 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-04 16:31:08.406 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field mapper in com.dcn.aaserver.service.impl.UserServiceImpl required a bean of type 'com.dcn.aaserver.domain.mapper.UserMapper' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.dcn.aaserver.domain.mapper.UserMapper' in your configuration.
+
+2020-02-04 16:40:35.236 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 13232 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:40:35.239 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:40:35.298 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:40:35.298 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:40:36.113 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:40:36.157 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38ms. Found 1 repository interfaces.
+2020-02-04 16:40:36.748 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a51a826d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:40:37.005 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:40:37.018 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:40:37.026 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:40:37.027 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:40:37.105 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:40:37.105 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1807 ms
+2020-02-04 16:40:37.518 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:40:37.605 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:40:37.640 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:40:37.678 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:40:37.679 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:40:37.768 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:40:37.860 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:40:38.377 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:40:38.422 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:40:38.605 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:40:38.870 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:40:38.952 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:40:39.014 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:40:39.123 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:40:39.329 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:40:39.343 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:40:39.364 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:40:39.460 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:40:39.477 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:40:39.479 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.553 seconds (JVM running for 5.777)
+2020-02-04 16:40:39.488 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:40:39.632 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:40:39.632 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:40:39.643 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 16:42:31.554 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 15340 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:42:31.557 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:42:31.619 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:42:31.619 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:42:32.468 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:42:32.510 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36ms. Found 1 repository interfaces.
+2020-02-04 16:42:33.083 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79f57814] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:42:33.331 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:42:33.345 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:42:33.354 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:42:33.355 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:42:33.439 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:42:33.439 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1820 ms
+2020-02-04 16:42:33.831 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:42:33.920 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:42:33.956 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:42:33.997 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:42:33.998 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:42:34.103 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:42:34.187 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:42:34.709 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:42:34.750 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:42:34.958 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:42:35.235 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:42:35.338 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:42:35.404 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:42:35.514 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:42:35.728 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:42:35.741 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:42:35.760 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:42:35.874 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:42:35.894 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:42:35.896 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.655 seconds (JVM running for 5.905)
+2020-02-04 16:42:35.907 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:42:36.421 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:42:36.422 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:42:36.431 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-02-04 16:43:12.085 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 3852 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:43:12.091 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:43:12.147 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:43:12.147 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:43:13.018 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:43:13.058 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2020-02-04 16:43:13.608 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$95a50064] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:43:13.861 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:43:13.873 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:43:13.881 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:43:13.881 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:43:13.959 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:43:13.960 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1813 ms
+2020-02-04 16:43:14.324 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:43:14.409 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:43:14.459 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:43:14.498 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:43:14.499 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:43:14.589 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:43:14.673 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:43:15.165 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:43:15.200 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:43:15.378 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:43:15.643 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:43:15.728 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:43:15.793 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:43:15.911 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:43:16.118 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:43:16.132 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:43:16.153 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:43:16.253 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:43:16.271 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:43:16.273 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.513 seconds (JVM running for 5.786)
+2020-02-04 16:43:16.283 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:43:17.220 [RMI TCP Connection(3)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:43:17.222 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:43:17.233 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 16:44:35.938 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 13880 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:44:35.941 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:44:35.988 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:44:35.988 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:44:37.000 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:44:37.051 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45ms. Found 1 repository interfaces.
+2020-02-04 16:44:37.727 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$268820b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:44:37.982 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:44:37.995 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:44:38.004 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:44:38.005 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:44:38.089 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:44:38.089 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2101 ms
+2020-02-04 16:44:38.550 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:44:38.658 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:44:38.699 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:44:38.746 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:44:38.748 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:44:38.868 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:44:38.966 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:44:39.597 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:44:39.636 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:44:39.922 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:44:40.180 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:44:40.282 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:44:40.354 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:44:40.478 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:44:40.727 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:44:40.742 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:44:40.763 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:44:40.869 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:44:40.889 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:44:40.891 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 5.448 seconds (JVM running for 7.445)
+2020-02-04 16:44:40.901 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:44:40.963 [RMI TCP Connection(3)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:44:40.964 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:44:40.974 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 16:45:21.053 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:45:21.061 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:45:21.071 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-04 16:45:21.085 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-02-04 16:45:23.966 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 5116 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:45:23.969 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:45:24.032 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:45:24.033 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:45:24.908 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:45:24.950 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
+2020-02-04 16:45:25.474 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d3a9962] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:45:25.710 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:45:25.722 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:45:25.731 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:45:25.732 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:45:25.809 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:45:25.809 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1776 ms
+2020-02-04 16:45:26.186 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:45:26.272 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:45:26.307 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:45:26.349 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:45:26.350 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:45:26.438 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:45:26.539 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:45:27.041 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:45:27.078 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:45:27.249 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:45:27.520 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:45:27.603 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:45:27.663 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:45:27.768 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:45:27.972 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:45:27.985 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:45:28.005 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:45:28.101 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:45:28.118 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:45:28.121 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.481 seconds (JVM running for 5.764)
+2020-02-04 16:45:28.129 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:45:28.422 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:45:28.423 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:45:28.433 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 16:46:36.551 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 2336 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:46:36.555 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:46:36.614 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:46:36.614 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:46:37.423 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:46:37.467 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38ms. Found 1 repository interfaces.
+2020-02-04 16:46:38.009 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$99bd11e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:46:38.299 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:46:38.313 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:46:38.322 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:46:38.322 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:46:38.398 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:46:38.398 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1784 ms
+2020-02-04 16:46:38.801 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:46:38.890 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:46:38.927 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:46:38.966 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:46:38.967 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:46:39.061 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:46:39.162 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:46:39.668 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:46:39.701 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:46:39.878 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:46:40.164 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:46:40.251 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:46:40.314 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:46:40.422 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:46:40.629 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:46:40.642 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:46:40.662 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:46:40.761 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:46:40.779 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:46:40.782 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.532 seconds (JVM running for 5.866)
+2020-02-04 16:46:40.792 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:46:41.765 [RMI TCP Connection(2)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:46:41.765 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:46:41.777 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2020-02-04 16:46:42.876 [http-nio-9998-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.NoSuchMethodError: com.dcn.aaserver.domain.dto.UserDto.setPassword(Ljava/lang/String;)V] with root cause
+java.lang.NoSuchMethodError: com.dcn.aaserver.domain.dto.UserDto.setPassword(Ljava/lang/String;)V
+	at com.dcn.aaserver.domain.mapper.UserMapperImpl.toDto(UserMapperImpl.java:49)
+	at com.dcn.aaserver.domain.mapper.UserMapperImpl.toDto(UserMapperImpl.java:82)
+	at com.dcn.aaserver.service.impl.UserServiceImpl.getUsers(UserServiceImpl.java:25)
+	at com.dcn.aaserver.rest.UserResource.getUsers(UserResource.java:22)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:118)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.dcn.aaserver.config.CorsFilter.doFilter(CorsFilter.java:33)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-02-04 16:48:52.653 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 2860 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:48:52.656 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:48:52.716 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:48:52.716 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:48:53.526 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:48:53.569 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
+2020-02-04 16:48:54.091 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b9a26fef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:48:54.332 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:48:54.344 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:48:54.353 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:48:54.353 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:48:54.431 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:48:54.431 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1715 ms
+2020-02-04 16:48:54.801 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:48:54.889 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:48:54.924 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:48:54.963 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:48:54.964 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:48:55.055 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:48:55.153 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:48:55.651 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:48:55.686 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:48:55.863 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:48:56.151 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:48:56.235 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:48:56.294 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:48:56.414 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:48:56.618 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:48:56.662 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:48:56.683 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:48:56.787 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:48:56.805 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:48:56.807 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.485 seconds (JVM running for 5.665)
+2020-02-04 16:48:56.816 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:48:57.082 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:48:57.083 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:48:57.092 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-02-04 16:49:37.017 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 14568 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 16:49:37.020 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 16:49:37.088 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 16:49:37.089 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 16:49:37.973 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 16:49:38.015 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
+2020-02-04 16:49:38.540 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9260e29a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 16:49:38.806 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 16:49:38.818 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:49:38.828 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 16:49:38.828 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 16:49:38.904 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 16:49:38.905 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1816 ms
+2020-02-04 16:49:39.280 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 16:49:39.384 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 16:49:39.420 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 16:49:39.460 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 16:49:39.461 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 16:49:39.552 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 16:49:39.635 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 16:49:40.130 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 16:49:40.166 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 16:49:40.342 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 16:49:40.623 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 16:49:40.714 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 16:49:40.779 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 16:49:40.900 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 16:49:41.117 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 16:49:41.130 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 16:49:41.149 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 16:49:41.249 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 16:49:41.268 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 16:49:41.270 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.603 seconds (JVM running for 5.964)
+2020-02-04 16:49:41.280 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 16:49:41.427 [RMI TCP Connection(3)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 16:49:41.428 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 16:49:41.438 [RMI TCP Connection(3)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 17:06:15.213 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 2136 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 17:06:15.237 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 17:06:15.659 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:06:15.660 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:06:16.882 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 17:06:16.932 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42ms. Found 1 repository interfaces.
+2020-02-04 17:06:17.629 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b9b1b509] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 17:06:17.912 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 17:06:17.924 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 17:06:17.932 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:06:17.932 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 17:06:18.062 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:06:18.062 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2402 ms
+2020-02-04 17:06:18.518 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:06:18.637 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:06:18.689 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 17:06:18.731 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 17:06:18.733 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 17:06:18.842 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 17:06:18.943 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 17:06:19.613 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 17:06:19.660 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:06:19.901 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 17:06:20.821 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 17:06:20.922 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 17:06:20.997 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 17:06:21.120 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:06:21.402 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 17:06:21.418 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 17:06:21.438 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 17:06:21.620 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 17:06:21.649 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 17:06:21.677 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 7.027 seconds (JVM running for 9.637)
+2020-02-04 17:06:21.759 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 17:06:23.125 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:06:23.126 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:06:23.157 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 31 ms
+2020-02-04 17:14:27.769 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 3296 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 17:14:27.772 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 17:14:27.864 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:14:27.864 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:14:29.283 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 17:14:29.335 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46ms. Found 1 repository interfaces.
+2020-02-04 17:14:30.213 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7036d7a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 17:14:30.520 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2020-02-04 17:14:30.536 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2020-02-04 17:14:30.545 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:14:30.546 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 17:14:30.640 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:14:30.640 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2776 ms
+2020-02-04 17:14:31.618 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:14:31.879 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:14:31.950 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 17:14:32.005 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 17:14:32.008 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 17:14:32.162 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 17:14:32.280 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 17:14:33.010 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 17:14:33.054 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:14:33.312 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 17:14:33.754 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 17:14:34.033 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 17:14:34.154 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 17:14:34.488 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:14:34.859 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 17:14:34.876 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 17:14:34.900 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 17:14:35.039 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2020-02-04 17:14:35.063 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2020-02-04 17:14:35.068 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 7.847 seconds (JVM running for 10.512)
+2020-02-04 17:14:35.082 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 17:14:35.948 [RMI TCP Connection(2)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:14:35.949 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:14:35.968 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 19 ms
+2020-02-04 17:34:54.217 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 9376 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 17:34:54.218 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 17:34:54.268 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:34:54.268 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:34:55.089 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 17:34:55.133 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39ms. Found 1 repository interfaces.
+2020-02-04 17:34:55.707 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c0a87fbb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 17:34:55.941 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9989 (http)
+2020-02-04 17:34:55.953 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9989"]
+2020-02-04 17:34:55.962 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:34:55.962 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 17:34:56.048 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:34:56.049 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1780 ms
+2020-02-04 17:34:57.136 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:34:57.219 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:34:57.255 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 17:34:57.291 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 17:34:57.292 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 17:34:57.384 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 17:34:57.470 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 17:34:57.990 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 17:34:58.070 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:34:58.484 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 17:34:58.769 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 17:34:58.868 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 17:34:58.932 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 17:34:59.048 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:34:59.302 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 17:34:59.316 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 17:34:59.341 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 17:34:59.444 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9989"]
+2020-02-04 17:34:59.461 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9989 (http) with context path ''
+2020-02-04 17:34:59.463 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 5.549 seconds (JVM running for 7.183)
+2020-02-04 17:34:59.474 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9998
+2020-02-04 17:34:59.916 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:34:59.916 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:34:59.927 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2020-02-04 17:38:51.183 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 6008 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 17:38:51.186 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 17:38:51.249 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:38:51.249 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:38:52.033 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 17:38:52.073 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2020-02-04 17:38:52.631 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e21ffb7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 17:38:52.897 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9989 (http)
+2020-02-04 17:38:52.909 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9989"]
+2020-02-04 17:38:52.917 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:38:52.917 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 17:38:52.993 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:38:52.993 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1743 ms
+2020-02-04 17:38:53.359 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:38:53.455 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:38:53.488 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 17:38:53.524 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 17:38:53.525 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 17:38:53.609 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 17:38:53.692 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 17:38:54.206 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 17:38:54.239 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:38:54.412 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 17:38:54.664 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 17:38:54.750 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 17:38:54.808 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 17:38:54.915 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:38:55.115 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 17:38:55.129 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 17:38:55.148 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 17:38:55.244 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9989"]
+2020-02-04 17:38:55.261 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9989 (http) with context path ''
+2020-02-04 17:38:55.263 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 4.395 seconds (JVM running for 5.615)
+2020-02-04 17:38:55.272 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9989
+2020-02-04 17:38:56.121 [RMI TCP Connection(2)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:38:56.123 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:38:56.132 [RMI TCP Connection(2)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2020-02-04 17:39:22.632 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 13196 (D:\project\mine\aaserver\target\classes started by doanhnguyen in D:\project\mine\aaserver)
+2020-02-04 17:39:22.634 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - The following profiles are active: dev
+2020-02-04 17:39:22.679 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-04 17:39:22.679 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-04 17:39:23.606 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-02-04 17:39:23.656 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43ms. Found 1 repository interfaces.
+2020-02-04 17:39:24.283 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65314077] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-04 17:39:24.534 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9989 (http)
+2020-02-04 17:39:24.547 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9989"]
+2020-02-04 17:39:24.556 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-02-04 17:39:24.557 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-02-04 17:39:24.640 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-02-04 17:39:24.640 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1961 ms
+2020-02-04 17:39:25.062 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-02-04 17:39:25.154 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-02-04 17:39:25.190 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-02-04 17:39:25.232 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-02-04 17:39:25.233 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-02-04 17:39:25.329 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-02-04 17:39:25.421 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-02-04 17:39:25.954 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 17:39:25.993 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-02-04 17:39:26.276 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-02-04 17:39:26.555 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-04 17:39:26.661 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-02-04 17:39:26.730 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-02-04 17:39:26.862 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:39:27.111 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-02-04 17:39:27.124 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-02-04 17:39:27.145 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-02-04 17:39:27.252 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9989"]
+2020-02-04 17:39:27.272 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9989 (http) with context path ''
+2020-02-04 17:39:27.274 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Started AaServerApplication in 5.052 seconds (JVM running for 6.514)
+2020-02-04 17:39:27.284 [restartedMain] INFO  com.dcn.aaserver.AaServerApplication - Server start at localhost:9989
+2020-02-04 17:39:28.089 [RMI TCP Connection(1)-10.72.126.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-04 17:39:28.090 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-02-04 17:39:28.102 [RMI TCP Connection(1)-10.72.126.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2020-02-04 17:41:19.257 [Thread-8] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-04 17:41:19.267 [Thread-8] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-04 17:41:19.273 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-02-04 17:41:19.281 [Thread-8] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
