@@ -2,16 +2,14 @@ package com.dasan.aaserver.domain.entity;
 
 
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "user")
 @Data
-public class UserEntity implements Serializable {
+public class UserEntity extends AuditingEntity implements Serializable {
 
     @Id
     @Column(name = "id")
@@ -38,13 +36,4 @@ public class UserEntity implements Serializable {
 
     @Column
     private Long isDeleted;
-
-    @Column
-    @CreationTimestamp
-    private Timestamp createdTime;
-
-    @Column
-    @CreationTimestamp
-    private Timestamp updatedTime;
-
 }

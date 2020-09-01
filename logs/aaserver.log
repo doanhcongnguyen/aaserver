@@ -6113,3 +6113,92 @@ java.sql.SQLSyntaxErrorException: You have an error in your SQL syntax; check th
 2020-09-01 15:01:04.184 [RMI TCP Connection(3)-10.72.128.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2020-09-01 15:01:04.198 [RMI TCP Connection(3)-10.72.128.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
 2020-09-01 15:01:18.668 [http-nio-9989-exec-1] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=3861cfd5-a226-4e4a-959a-6141f7cb1670, api=POST /user/search, ip=127.0.0.1, status=200, time=87 ms)
+2020-09-01 15:23:58.795 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 19360 (D:\personal\git\aaserver\target\classes started by doanh.nguyen in D:\personal\git\aaserver)
+2020-09-01 15:23:58.798 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - The following profiles are active: dev
+2020-09-01 15:23:58.873 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-01 15:23:58.874 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-01 15:23:59.951 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-09-01 15:24:00.015 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 59ms. Found 1 repository interfaces.
+2020-09-01 15:24:00.673 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2d0d56a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-01 15:24:01.156 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9989 (http)
+2020-09-01 15:24:01.172 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9989"]
+2020-09-01 15:24:01.183 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-01 15:24:01.183 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-09-01 15:24:01.290 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-01 15:24:01.290 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2416 ms
+2020-09-01 15:24:01.841 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-01 15:24:01.935 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-01 15:24:01.977 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-01 15:24:02.020 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-09-01 15:24:02.021 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-09-01 15:24:02.133 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-01 15:24:02.240 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-01 15:24:03.032 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-01 15:24:03.079 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-09-01 15:24:03.404 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-01 15:24:03.742 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-01 15:24:03.871 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-01 15:24:04.007 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-09-01 15:24:04.165 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-01 15:24:04.457 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-01 15:24:04.471 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-01 15:24:04.498 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-01 15:24:04.663 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9989"]
+2020-09-01 15:24:04.686 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9989 (http) with context path ''
+2020-09-01 15:24:04.689 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - Started AaServerApplication in 6.232 seconds (JVM running for 8.4)
+2020-09-01 15:24:04.707 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - Server start at localhost:9989
+2020-09-01 15:24:05.069 [RMI TCP Connection(3)-10.72.128.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-01 15:24:05.069 [RMI TCP Connection(3)-10.72.128.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-01 15:24:05.084 [RMI TCP Connection(3)-10.72.128.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 15 ms
+2020-09-01 15:25:00.488 [http-nio-9989-exec-1] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=ca171354-a0a6-469a-9111-201b72a9d0b3, api=POST /user/search, ip=127.0.0.1, status=200, time=167 ms)
+2020-09-01 15:25:09.901 [http-nio-9989-exec-3] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=3ef3bdf1-d39f-4a2f-883d-fe441c57dee2, api=POST /user, ip=127.0.0.1, status=201, time=67 ms)
+2020-09-01 15:25:09.937 [http-nio-9989-exec-4] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=8b6078bc-d62d-4e50-acd1-6d3e7eb36ca1, api=POST /user/search, ip=127.0.0.1, status=200, time=9 ms)
+2020-09-01 15:25:34.165 [http-nio-9989-exec-5] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=f9b13ad7-3cf9-4c79-beb9-bfc92dc4d5b8, api=POST /user, ip=127.0.0.1, status=204, time=35 ms)
+2020-09-01 15:25:34.191 [http-nio-9989-exec-6] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=3e059f3f-589a-4496-b119-08ba4d4d3e91, api=POST /user/search, ip=127.0.0.1, status=200, time=5 ms)
+2020-09-01 17:40:25.912 [http-nio-9989-exec-9] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=e96886db-9487-4492-ad0d-500dbef09306, api=POST /user/search, ip=127.0.0.1, status=200, time=92 ms)
+2020-09-01 17:40:31.497 [http-nio-9989-exec-1] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=6b270a5a-94ff-461e-8600-2f9fd906e731, api=POST /user, ip=127.0.0.1, status=204, time=17 ms)
+2020-09-01 17:40:31.546 [http-nio-9989-exec-2] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=76474524-6f21-46ac-9f0c-26b60bdf7bc6, api=POST /user/search, ip=127.0.0.1, status=200, time=6 ms)
+2020-09-01 17:41:37.562 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - Starting AaServerApplication on VNHANO-L-3693 with PID 23428 (D:\personal\git\aaserver\target\classes started by doanh.nguyen in D:\personal\git\aaserver)
+2020-09-01 17:41:37.565 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - The following profiles are active: dev
+2020-09-01 17:41:37.622 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-09-01 17:41:37.623 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-09-01 17:41:38.561 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-09-01 17:41:38.610 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45ms. Found 1 repository interfaces.
+2020-09-01 17:41:39.221 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cdd2b9cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-09-01 17:41:39.569 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9989 (http)
+2020-09-01 17:41:39.584 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9989"]
+2020-09-01 17:41:39.593 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2020-09-01 17:41:39.593 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.22]
+2020-09-01 17:41:39.696 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-09-01 17:41:39.696 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2073 ms
+2020-09-01 17:41:40.290 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-09-01 17:41:40.383 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-09-01 17:41:40.424 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-09-01 17:41:40.467 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2020-09-01 17:41:40.468 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2020-09-01 17:41:40.583 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-09-01 17:41:40.688 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-09-01 17:41:41.417 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-01 17:41:41.468 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-09-01 17:41:41.805 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2020-09-01 17:41:42.185 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-01 17:41:42.294 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-01 17:41:42.385 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-09-01 17:41:42.560 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-01 17:41:42.851 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-09-01 17:41:42.885 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-09-01 17:41:42.911 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-09-01 17:41:43.102 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9989"]
+2020-09-01 17:41:43.151 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9989 (http) with context path ''
+2020-09-01 17:41:43.155 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - Started AaServerApplication in 5.964 seconds (JVM running for 7.631)
+2020-09-01 17:41:43.173 [restartedMain] INFO  c.dasan.aaserver.AaServerApplication - Server start at localhost:9989
+2020-09-01 17:41:44.747 [RMI TCP Connection(3)-10.72.128.91] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-01 17:41:44.747 [RMI TCP Connection(3)-10.72.128.91] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-09-01 17:41:44.760 [RMI TCP Connection(3)-10.72.128.91] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 13 ms
+2020-09-01 17:43:04.010 [http-nio-9989-exec-1] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=e2551f31-66e7-4888-ba35-8858ae09d566, api=POST /user/search, ip=127.0.0.1, status=200, time=103 ms)
+2020-09-01 17:43:08.719 [http-nio-9989-exec-2] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=e5be776b-d686-4a80-a7b7-dc03f5a16516, api=POST /user, ip=127.0.0.1, status=204, time=78 ms)
+2020-09-01 17:43:08.753 [http-nio-9989-exec-3] INFO  com.dasan.aaserver.aspect.LogAspect - RequestDto(requestId=549091ed-bd2e-4cb3-b3ee-72a8bd7937f5, api=POST /user/search, ip=127.0.0.1, status=200, time=6 ms)
