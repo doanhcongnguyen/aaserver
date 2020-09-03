@@ -3,7 +3,6 @@ package com.dasan.aaserver.domain.dto;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
-import java.sql.Timestamp;
 
 @Data
 public class UserDto {
@@ -12,9 +11,8 @@ public class UserDto {
     @NotNull
     private String username;
     private String fullName;
+    private String password;
     private String email;
     private String language;
     private String telephone;
-    private Timestamp createdTime;
-    private Timestamp updatedTime;
 }

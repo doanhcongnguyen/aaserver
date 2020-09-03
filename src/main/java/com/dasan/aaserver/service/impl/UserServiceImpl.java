@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,15 +28,13 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper mapper;
 
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Override
     public List<UserDto> getUsers() {
         List<UserEntity> list = repository.findAll();
         return mapper.toDto(list);
-    }
-
-    public Page<UserDto> getUsers(Pageable pageable) {
-        Page<UserEntity> page = repository.findAllPageable(pageable);
-        return page.map(mapper::toDto);
     }
 
     @Override
@@ -49,6 +48,7 @@ public class UserServiceImpl implements UserService {
     public UserDto create(UserDto dto) {
         UserEntity userEntity = mapper.toEntity(dto);
         userEntity.setIsDeleted(0L);
+        userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword()));
         UserEntity entity = repository.save(userEntity);
         return mapper.toDto(entity);
     }

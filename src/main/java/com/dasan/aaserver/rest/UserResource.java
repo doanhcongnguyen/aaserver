@@ -25,9 +25,8 @@ public class UserResource {
 
     @Log("GET /users")
     @GetMapping("/users")
-    public ResponseEntity getUsers(Pageable pageable) {
-        // TODO: pageable is always { number: 0, size: 20 }
-        return new ResponseEntity(service.getUsers(pageable), HttpStatus.OK);
+    public ResponseEntity getUsers() {
+        return new ResponseEntity(service.getUsers(), HttpStatus.OK);
     }
 
     @Log("GET /user/{username}")
@@ -42,8 +41,6 @@ public class UserResource {
         this.validateBeforeCreate(dto);
         return new ResponseEntity(service.create(dto), HttpStatus.CREATED);
     }
-
-
 
     @Log("POST /user/search")
     @PostMapping(value = "/user/search", consumes = MediaType.APPLICATION_JSON_VALUE)
