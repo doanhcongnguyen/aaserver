@@ -32,7 +32,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     private void setPermission(Set<GrantedAuthority> grantedAuthorities) {
         // TODO: get permission here..
-        grantedAuthorities.add(new SimpleGrantedAuthority("ADMIN"));
+        grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
+        grantedAuthorities.add(new SimpleGrantedAuthority("dev"));
     }
 
 }
