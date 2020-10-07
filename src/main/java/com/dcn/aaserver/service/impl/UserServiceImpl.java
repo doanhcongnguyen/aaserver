@@ -65,8 +65,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void update(UserDto dto) {
-        this.validateIdExists(dto.getId());
+        UserEntity oldUser = this.validateIdExists(dto.getId());
         UserEntity userToUpdate = mapper.toEntity(dto);
+        userToUpdate.setPassword(dto.isChangePass() ? passwordEncoder.encode(dto.getPassword()) : oldUser.getPassword());
         userToUpdate.setIsDeleted(0L);
         repository.save(userToUpdate);
     }
@@ -77,8 +78,18 @@ public class UserServiceImpl implements UserService {
         repository.deleteById(id);
     }
 
-    void validateIdExists(Long id) {
+    @Override
+    public void changePass(String username, String newPassword) {
+        Optional<UserEntity> user = repository.findOneByUsername(username);
+        ValidationUtils.isNull(user, "User", "username", username);
+        UserEntity userToUpdate = user.get();
+        userToUpdate.setPassword(passwordEncoder.encode(newPassword));
+        repository.save(userToUpdate);
+    }
+
+    UserEntity validateIdExists(Long id) {
         Optional<UserEntity> oldUser = repository.findOneById(id);
         ValidationUtils.isNull(oldUser, "User", "id", id);
+        return oldUser.get();
     }
 }

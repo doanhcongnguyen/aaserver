@@ -10,11 +10,12 @@ import org.mapstruct.ReportingPolicy;
 @Mapper(componentModel = "spring", uses = {}, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserMapper extends EntityMapper<UserDto, UserEntity> {
 
-    @Mapping(target = "username", expression = "java(usernameConverter(entity.getUsername()))")
+    @Mapping(target = "fullName", expression = "java(fullNameConverter(entity.getFullName()))")
+    @Mapping(target = "password", ignore = true)
     UserDto toDto(UserEntity entity);
 
-    @Named("usernameConverter")
-    default String usernameConverter(String name) {
-        return name == null ? null : name.toUpperCase();
+    @Named("fullNameConverter")
+    default String fullNameConverter(String fullName) {
+        return fullName == null ? null : fullName.toUpperCase();
     }
 }

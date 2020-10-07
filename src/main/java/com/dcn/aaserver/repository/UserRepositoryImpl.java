@@ -35,7 +35,7 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
     }
 
     private String createFilterSqlAndAddParam(List<Object> paramList, String username, String fullName, String telephone, String email) {
-        StringBuilder filterSql = new StringBuilder(" FROM User u " +
+        StringBuilder filterSql = new StringBuilder(" FROM user u " +
                 " WHERE is_deleted = 0");
         if (!CommonUtils.isNullOrEmpty(username)) {
             filterSql.append(" AND username LIKE ?");

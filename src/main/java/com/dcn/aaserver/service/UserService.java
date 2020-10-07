@@ -19,4 +19,6 @@ public interface UserService {
     void update(UserDto dto);
 
     void delete(Long id);
+
+    void changePass(String username, String newPassword);
 }

@@ -1,5 +1,6 @@
 package com.dcn.aaserver.config;
 
+import com.dcn.aaserver.utils.CommonUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;
@@ -15,7 +16,6 @@ public class JpaAuditingConfiguration {
     @Bean
     public AuditorAware<String> auditorProvider() {
 
-        // TODO: use SecurityContextHolder.getContext().getAuthentication().getName()
-        return () -> Optional.ofNullable("dcn");
+        return () -> Optional.ofNullable(CommonUtils.getLoggedInUsername());
     }
 }

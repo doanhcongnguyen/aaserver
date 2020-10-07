@@ -1,5 +1,8 @@
 package com.dcn.aaserver.utils;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+
 import javax.servlet.http.HttpServletRequest;
 
 public class CommonUtils {
@@ -21,5 +24,10 @@ public class CommonUtils {
 
     public static boolean isNullOrEmpty(String s) {
         return s == null || s.isEmpty();
+    }
+
+    public static String getLoggedInUsername() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        return auth.getName();
     }
 }
