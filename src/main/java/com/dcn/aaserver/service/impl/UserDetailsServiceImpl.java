@@ -1,6 +1,7 @@
 package com.dcn.aaserver.service.impl;
 
 
+import com.dcn.aaserver.domain.entity.RoleEntity;
 import com.dcn.aaserver.domain.entity.UserEntity;
 import com.dcn.aaserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -25,15 +27,18 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Transactional
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity userEntity = userRepository.findByUserName(username);
+        Set<GrantedAuthority> grantedAuthorities = this.setPermission(userEntity.getRoles());
+        return new org.springframework.security.core.userdetails.User(
+                userEntity.getUsername(),
+                userEntity.getPassword(),
+                grantedAuthorities);
+    }
+
+    private Set<GrantedAuthority> setPermission(List<RoleEntity> roles) {
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
-        this.setPermission(grantedAuthorities);
-        return new org.springframework.security.core.userdetails.User(userEntity.getUsername(), userEntity.getPassword(), grantedAuthorities);
+        for (RoleEntity role : roles) {
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getCode()));
+        }
+        return grantedAuthorities;
     }
-
-    private void setPermission(Set<GrantedAuthority> grantedAuthorities) {
-        // TODO: get permission here..
-        grantedAuthorities.add(new SimpleGrantedAuthority("admin"));
-        grantedAuthorities.add(new SimpleGrantedAuthority("dev"));
-    }
-
 }

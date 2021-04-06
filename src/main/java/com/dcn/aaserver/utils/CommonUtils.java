@@ -4,6 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 public class CommonUtils {
 
@@ -26,6 +27,9 @@ public class CommonUtils {
         return s == null || s.isEmpty();
     }
 
+    public static <T> boolean isNullOrEmpty(List<T> s) {
+        return s == null || s.isEmpty();
+    }
     public static String getLoggedInUsername() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         return auth.getName();

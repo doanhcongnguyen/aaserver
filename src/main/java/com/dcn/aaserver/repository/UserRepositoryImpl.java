@@ -24,14 +24,21 @@ public class UserRepositoryImpl implements UserRepositoryCustom {
     public PaginationDto filter(String username, String fullName, String telephone, String email, int pageSize, int pageNumber) {
         List<Object> paramList = new ArrayList<>();
         String filterSql = this.createFilterSqlAndAddParam(paramList, username, fullName, telephone, email);
-        String countSql = "SELECT COUNT(*) " + filterSql;
+        String countSql = "SELECT COUNT(1) " + filterSql;
         String objectSql = "SELECT u.* " + filterSql;
 
         Query countQuery = entityManager.createNativeQuery(countSql);
         Query objectQuery = entityManager.createNativeQuery(objectSql, UserEntity.class);
 
         return PaginationUtils.createPagination(paramList, countQuery, objectQuery, pageSize, pageNumber);
+    }
 
+    @Transactional
+    public void deleteMultipleByIds(List<Long> ids) {
+        String sql = "UPDATE user SET is_deleted = 1 WHERE id IN :ids";
+        Query query = entityManager.createNativeQuery(sql);
+        query.setParameter("ids", ids);
+        query.executeUpdate();
     }
 
     private String createFilterSqlAndAddParam(List<Object> paramList, String username, String fullName, String telephone, String email) {

@@ -22,12 +22,12 @@ public class CustomTokenEnhancer implements TokenEnhancer {
         final Map<String, Object> additionalInfo = new HashMap<>();
         String username = authentication.getName();
         UserEntity userEntity = userRepository.findByUserName(username);
-        this.doSetAdditionData(userEntity, additionalInfo);
+        this.setAdditionData(userEntity, additionalInfo);
         ((DefaultOAuth2AccessToken) accessToken).setAdditionalInformation(additionalInfo);
         return accessToken;
     }
 
-    private void doSetAdditionData(UserEntity userEntity, Map<String, Object> additionalInfo) {
+    private void setAdditionData(UserEntity userEntity, Map<String, Object> additionalInfo) {
         additionalInfo.put(Constants.AA.USER_ID, userEntity.getId());
         additionalInfo.put(Constants.AA.FULL_NAME, userEntity.getFullName());
         additionalInfo.put(Constants.AA.LANGUAGE, userEntity.getLanguage());

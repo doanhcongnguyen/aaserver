@@ -7,7 +7,7 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 import org.mapstruct.ReportingPolicy;
 
-@Mapper(componentModel = "spring", uses = {}, unmappedTargetPolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring", uses = { RoleMapper.class }, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserMapper extends EntityMapper<UserDto, UserEntity> {
 
     @Mapping(target = "fullName", expression = "java(fullNameConverter(entity.getFullName()))")

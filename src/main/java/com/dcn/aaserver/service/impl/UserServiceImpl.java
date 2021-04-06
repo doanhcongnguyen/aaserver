@@ -3,6 +3,7 @@ package com.dcn.aaserver.service.impl;
 import com.dcn.aaserver.domain.dto.PaginationDto;
 import com.dcn.aaserver.domain.dto.UserDto;
 import com.dcn.aaserver.domain.dto.UserSearchDto;
+import com.dcn.aaserver.domain.entity.RoleEntity;
 import com.dcn.aaserver.domain.entity.UserEntity;
 import com.dcn.aaserver.domain.mapper.UserMapper;
 import com.dcn.aaserver.repository.UserRepository;
@@ -45,10 +46,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserDto create(UserDto dto) {
+    public UserDto create(UserDto dto, List<RoleEntity> roles) {
         UserEntity userEntity = mapper.toEntity(dto);
         userEntity.setIsDeleted(0L);
         userEntity.setPassword(passwordEncoder.encode(userEntity.getPassword()));
+        userEntity.setRoles(roles);
         UserEntity entity = repository.save(userEntity);
         return mapper.toDto(entity);
     }
@@ -64,10 +66,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void update(UserDto dto) {
+    public void update(UserDto dto, List<RoleEntity> roles) {
         UserEntity oldUser = this.validateIdExists(dto.getId());
         UserEntity userToUpdate = mapper.toEntity(dto);
         userToUpdate.setPassword(dto.isChangePass() ? passwordEncoder.encode(dto.getPassword()) : oldUser.getPassword());
+        userToUpdate.setRoles(roles);
         userToUpdate.setIsDeleted(0L);
         repository.save(userToUpdate);
     }
@@ -76,6 +79,11 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id) {
         this.validateIdExists(id);
         repository.deleteById(id);
+    }
+
+    @Override
+    public void deleteMultipleByIds(List<Long> ids) {
+        repository.deleteMultipleByIds(ids);
     }
 
     @Override
